@@ -34,7 +34,7 @@ client.on('message', message => {
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
     let args = messageArray.slice(1);
-    if(command === settings.prefix + settings.rainbowcommand) {
+    if(command === "rainbow") {
         const rolez = message.mentions.roles.first() || message.guild.roles.find(r=> r.name === args [0])
         if(!rolez) return message.channel.send(settings.messageresponse.rolenotfound).catch(err=> message.channel.send("No response"))
         if(!message.guild.member(client.user.id).hasPermission("MANAGE_ROLES")) return message.channel.send(settings.messageresponse.missingperm).catch(err=> message.channel.send("no response"))
