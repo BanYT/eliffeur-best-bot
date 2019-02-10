@@ -9,7 +9,7 @@ exports.run = (client,message,args)=>{
   message.channel.send("``---------`` **Only Elifeur can do that !** ``---------``")
 	    }
     if(!rbug) return message.reply("What You Want To Restock?")
-        client.guilds.get("543895016976941078").channels.get("543902542141063179").send("Elifeur Restocked :"+ rbug)
+        client.guilds.get("542415150347583488").channels.get("542415416040095767").send("Elifeur Restocked :"+ rbug)
     message.channel.send("bug send!")
 }
 
