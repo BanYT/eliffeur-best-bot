@@ -14,6 +14,6 @@ exports.run = (client,message,args)=>{
 }
 
 module.exports.help = {
-	name: "bug",
-	alias: "BUG"
+	name: "add",
+	alias: "ADD"
 }
