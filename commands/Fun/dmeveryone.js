@@ -7,5 +7,5 @@ message.guild.members.map(x=>x.sendMessage(args.join(" ")))
   }
 
 module.exports.help = {
-  name:"test"
+  name:"el"
 }
