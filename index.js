@@ -53,7 +53,7 @@ client.on('message', message => {
                        message.channel.send(settings.messageresponse.rainbowstop).catch(err=> message.channel.send("No response"))
                        }
 
-
+});
 client.on('message', message => {
 
 	
