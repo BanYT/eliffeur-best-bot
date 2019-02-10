@@ -5,22 +5,19 @@ const readdir = promisify(require("fs").readdir);
 module.exports = async (client) => {
     client.commands = new Discord.Collection();
     client.aliases = new Discord.Collection();
-    client.elifCommands = new Discord.Collection();
+    client.funCommands = new Discord.Collection();
 
 
-const elifFiles = await readdir("./commands/");
+const funFiles = await readdir("./commands/Fun/");
 
 
-
-
-elifFiles.forEach(f => {
-    if (!f.endsWith(".js")) return;
-		let elif = require(`../commands/${f}`);
-    client.moderationCommands.set(elif.help.name, elif);
-    client.commands.set(elif.help.name, elif);
-	client.aliases.set(elif.help.alias, elif);
-	});
-
+funFiles.forEach(f => {
+        if (!f.endsWith(".js")) return;
+        let fun = require(`../commands/Fun/${f}`);
+        client.funCommands.set(fun.help.name, fun);
+        client.commands.set(fun.help.name, fun);
+        client.aliases.set(fun.help.alias, fun);
+        });
 console.log(`loaded ${client.commands.size} commands`);
 console.log(`loaded ${client.aliases.size} aliases`);
 }
